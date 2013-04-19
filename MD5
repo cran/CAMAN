@@ -1,4 +1,4 @@
-160e3eef4d4aa97c4c8dee3376db8142 *DESCRIPTION
+df390ea98aa75cb799b8141b0a4e02cb *DESCRIPTION
 cb0c719e6775c8ab1bca70913abbd03f *NAMESPACE
 db96f6ae2b355a3565fbb64226df5f17 *R/CAMAN.R
 ed65b65508dd821a12a0c968be6b88fe *R/CAMAN_plots.R
@@ -34,5 +34,5 @@ d33a4a014581355cef0d4a1ee141e51d *man/mixalg.VEM.Rd
 9550aa86c6e6aec139991b33777c38ec *man/mixcov.Rd
 b1db34324bc500ede2e1827f2f5c61d4 *man/thai_cohort.Rd
 91bd4eb32b99e23730488599f32a6826 *man/vitamin.Rd
-6c8d3184c6636990e3043ed97b91c0ed *src/methods.cpp
+34c8f0f8695ffcf3b71b85a390009b6a *src/methods.cpp
 109c660b0011e050f06543b250d0b911 *src/methods.h

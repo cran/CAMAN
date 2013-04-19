@@ -1,7 +1,7 @@
 Package: CAMAN
 Type: Package
-Version: 0.66
-Date: 2013-04-17
+Version: 0.67
+Date: 2013-04-19
 Title: Finite Mixture Models and meta-analysis tools - based on C.A.MAN
 Author: Peter Schlattmann <peter.schlattmann@mti.uni-jena.de>, Johannes
         Hoehne
@@ -16,8 +16,8 @@ License: GPL (>= 2)
 URL: http://r-forge.r-project.org/projects/caman/
 Repository: CRAN
 Repository/R-Forge/Project: caman
-Repository/R-Forge/Revision: 13
-Repository/R-Forge/DateTimeStamp: 2013-04-17 14:42:12
-Date/Publication: 2013-04-19 16:10:44
-Packaged: 2013-04-17 18:17:19 UTC; rforge
+Repository/R-Forge/Revision: 14
+Repository/R-Forge/DateTimeStamp: 2013-04-19 17:12:44
+Date/Publication: 2013-04-29 10:28:09
+Packaged: 2013-04-19 18:20:46 UTC; rforge
 NeedsCompilation: yes
