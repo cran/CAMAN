@@ -667,7 +667,7 @@ l<-len/5
 lam1<-er[1:l]
 lam2<-er[(l+1):(2*l)]
 prob<-er[((2*l)+1):(3*l)]
-ll<-er[(3*l+1):(4*l)]
+ll<-er[((3*l)+1)]
 max_grad<-er[(4*l+1):len]
 bic <- -2 * ll[1] + (3*length(prob)- 1) * log(length(obs1))
 
@@ -935,6 +935,7 @@ return(res)
 }
 
 
+
 CAMANboot<-function(obs1,obs2,var1,var2,lambda11,lambda12,prob1,lambda21,lambda22,prob2,rep,data,numiter=10000,acc=1.e-7){
 
     cl <- match.call()
@@ -956,6 +957,7 @@ CAMANboot<-function(obs1,obs2,var1,var2,lambda11,lambda12,prob1,lambda21,lambda2
   a<-matrix(nrow=(length(data[,1])),ncol=2)
 k_1<-matrix(nrow=rep,ncol=(length(lambda11)*3+2))
 k_2<-matrix(nrow=rep,ncol=(length(lambda21)*3+2))
+
 #print("###Bootstrap für Metadaten mit Startwerten")
 fun<-function(a,n,v1,v2,l1,l2,pro,numiter,acc){.Call("ema_meta_st", as.vector(a), as.vector(n),as.vector(v1),as.vector(v2),as.vector(l1),as.vector(l2),as.vector(pro),as.integer(numiter), as.double(acc), PACKAGE = "CAMAN")}
 j<-0
@@ -992,6 +994,7 @@ a[i,]<-rmvnorm(n = 1, mean=c(lambda11[1],lambda12[1]),sigma <- matrix(c(var1[i],
 }
 er1<-fun(a[,1],a[,2],var1,var2,lambda11,lambda12,prob1,numiter,acc)
 er2<-fun(a[,1],a[,2],var1,var2,lambda21,lambda22,prob2,numiter,acc)
+
 len1<-length(er1)
 l1<-len1/5
 lambda1_1<-er1[1:l1]
@@ -1027,56 +1030,60 @@ colnames(k_2)<-c(aaa,bbb,ccc,"LL_2","max_grad")
 if(j==rep) break
 }
 
-var1<-var(k_1[,1])
-var2<-var(k_1[,2])
-corr11<-cor(k_1[,1],k_1[,2])
-covv<-(sqrt(var1)*sqrt(var2))*corr11
-
+var_1<-rep(1,TRUE)
+var_2<-rep(1,TRUE)
+corr_1<-rep(1,TRUE)
+covv_1<-rep(1,TRUE)
+corr_2<-rep(1,TRUE)
+covv_2<-rep(1,TRUE)
 S1 <- array(rep(0, 2 * 2 * l1), c(2, 2, l1))
-for (i in 1:l1){
-S1[, , i]<-rbind(var1[i],covv[i],covv[i],var2[i])
-}
-
-
-#print( var1)
-var11<-var(k_2[,1])
-
-var12<-var(k_2[,2])
-
-corr1<-cor(k_2[,1],k_2[,2])
-var21<-var(k_2[,3])
-var22<-var(k_2[,4])
-corr2<-cor(k_2[,3],k_2[,4])
-corr<-c(corr1,corr2)
-v2_p1<-var(k_2[,5])
-v2_p2<-var(k_2[,6])
-var1<-c(var11,var21)
-var2<-c(var12,var22)
-covv<-(sqrt(var1)*sqrt(var2))*corr
-
-
-
-
 S2 <- array(rep(0, 2 * 2 * l2), c(2, 2, l2))
-for (i in 1:l2){
-S2[, , i]<-rbind(var1[i],covv[i],covv[i],var2[i])
+for(i in 1:(l1*2)){
+var_1[i]<-var(k_1[,i], use = "complete")
+
 }
 
+m<-1
 
+for(i in 1:l1 ){
+corr_1[i]<-cor(k_1[,m],k_1[,(m+1)], use = "complete")
+covv_1[i]<-(sqrt(var_1[m])*sqrt(var_1[(m+1)]))*corr_1[i]
+
+m=m+2}
+
+
+m<-1
+for(i in 1:l1 ){
+S1[, , i]<-rbind(var_1[m],covv_1[i],covv_1[i],var_1[(m+1)])
+m=m+2
+}
+
+m<-1
+for(i in 1:(l2*2)){
+
+var_2[i]<-var(k_2[,i], use = "complete")}
+
+for(i in 1:l2){
+corr_2[i]<-cor(k_2[,m],k_2[,(m+1)], use = "complete")
+covv_2[i]<-(sqrt(var_2[m])*sqrt(var_2[m+1]))*corr_2[i]
+m=m+2}
+ m<-1
+for(i in 1:l2 ){
+S2[, , i]<-rbind(var_2[m],covv_2[i],covv_2[i],var_2[(m+1)])
+m=m+2
+}
 
 for(i in rep){
 differenz<-(k_1[,m1]-k_2[,m2])}
 llh<-(-2)*differenz
 s_ll<-sort(llh)
 
+
 res<-new("CAMAN.BOOT.object", H0=k_1, S1=S1, H1=k_2,S2=S2, LL=s_ll, Q95=quantile(s_ll,0.95), Q975=quantile(s_ll,0.975), Q99=quantile(s_ll,0.99))
 return(res)
 } 
-
 #some abbrevated commands
 mixboot <- mixalg.boot
 mixalg.Boot <- mixalg.boot
 mixpboot <- mixalg.paraBoot
 mix.anova <- anova.CAMAN.object
-
-
