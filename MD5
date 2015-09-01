@@ -1,9 +1,9 @@
-642ea7d64fc1f15c21bc36a3ac7697ab *DESCRIPTION
-28f313641c8728119f24e62f30114dc1 *NAMESPACE
-b67c3ad7592c7f41bdc048c736b9967f *R/CAMAN.R
+ca522bfd1346e8ae54e5543355e485d1 *DESCRIPTION
+9e4f9f4ac157db2ea9ae2894ca2ed7ca *NAMESPACE
+cf7696f1148abdb58347319ef319d49a *R/CAMAN.R
 c7aeff4c1290dd0a8d08d168b42af144 *R/CAMAN_plots.R
 a49eca7921b14d13d1b5390dae1c9f11 *R/classes.R
-763835379a229f24bdba390a6489d151 *R/covariate_CAMAN.r
+9496ad1e5cd9f7a65044de28cf1667b9 *R/covariate_CAMAN.r
 9045b919bc82e5441d96fcd887ac3211 *R/zzz.R
 9262c6950475bd816c3078f18df9db50 *data/CT.RData
 9afcb1abacb3c78288b30030be13e3a2 *data/GDRmap.RData
@@ -40,7 +40,7 @@ ddbfacb7e687399cd05af008dc924744 *man/mixalg.EM.Rd
 3cfbab0d571eaa2dd9ca2de71cf99035 *man/mixalg.Rd
 d33a4a014581355cef0d4a1ee141e51d *man/mixalg.VEM.Rd
 ad4d152d8bb2fe189e0847e98ee7f4ef *man/mixalg.boot.Rd
-9550aa86c6e6aec139991b33777c38ec *man/mixcov.Rd
+a64cb9d9d44513ddd998455385bc98b5 *man/mixcov.Rd
 c77aa0144262f973275a8d4d8864cf6f *man/plots.Rd
 60b9b19d82a535c160d758d740ef8797 *man/rs12363681.rd
 b1db34324bc500ede2e1827f2f5c61d4 *man/thai_cohort.Rd
@@ -49,4 +49,4 @@ b1db34324bc500ede2e1827f2f5c61d4 *man/thai_cohort.Rd
 34c8f0f8695ffcf3b71b85a390009b6a *src/methods.cpp
 109c660b0011e050f06543b250d0b911 *src/methods.h
 3220c225a179e882c791acea4d97f903 *src/vemema.h
-1783fe57e038858e637ca83c5c61fd05 *src/vemema_vem.cpp
+16974234f3a7082992f438825ac51280 *src/vemema_vem.cpp
