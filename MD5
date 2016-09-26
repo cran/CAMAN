@@ -1,4 +1,4 @@
-ca522bfd1346e8ae54e5543355e485d1 *DESCRIPTION
+01e6f54de85260f271deda4552f1a16e *DESCRIPTION
 9e4f9f4ac157db2ea9ae2894ca2ed7ca *NAMESPACE
 cf7696f1148abdb58347319ef319d49a *R/CAMAN.R
 c7aeff4c1290dd0a8d08d168b42af144 *R/CAMAN_plots.R
@@ -31,7 +31,7 @@ e7d85050c8861fe6915baaf905915a27 *man/bivariate.EM.Rd
 3fbb413f7c8a21d095bcc45cac856e25 *man/bivariate.mixalg.Rd
 9c2d9b68b125b2b9a9d085aeb0d16d93 *man/boot.Rd
 d46a4846ed6a191f8005ba1dce065edc *man/getFDR.Rd
-35e0880a417d7d4089ff0c7cbb78ce5b *man/golubMerge.Rd
+317be25142bc4f5815c5ec9629a55c8e *man/golubMerge.Rd
 8dd6bf76efea5704936858c9d4bdb24e *man/heage.Rd
 f419d21b0fa0ead33819a598bee66d31 *man/hepab.Rd
 5288122c0440ae7aa56df4a2015be90d *man/hist.CAMAN.object.Rd
@@ -46,7 +46,7 @@ c77aa0144262f973275a8d4d8864cf6f *man/plots.Rd
 b1db34324bc500ede2e1827f2f5c61d4 *man/thai_cohort.Rd
 9d5159973b1c5f516dc21780bac14728 *man/vem_grad.Rd
 91bd4eb32b99e23730488599f32a6826 *man/vitamin.Rd
-34c8f0f8695ffcf3b71b85a390009b6a *src/methods.cpp
+fd2a937a253cd8e50c14b28f2bd9b97e *src/methods.cpp
 109c660b0011e050f06543b250d0b911 *src/methods.h
 3220c225a179e882c791acea4d97f903 *src/vemema.h
 16974234f3a7082992f438825ac51280 *src/vemema_vem.cpp
