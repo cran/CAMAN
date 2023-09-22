@@ -1,7 +1,7 @@
 Package: CAMAN
 Type: Package
-Version: 0.77
-Date: 2023-04-10
+Version: 0.78
+Date: 2023-09-19
 Title: Finite Mixture Models and Meta-Analysis Tools - Based on C.A.MAN
 Author: Peter Schlattmann <peter.schlattmann@mti.uni-jena.de>, Johannes
         Hoehne, Maryna Verba
@@ -15,10 +15,7 @@ Description: Tools for the analysis of finite semiparametric mixtures.
         al., 2015; <doi:10.1016/j.jclinepi.2014.08.013>).
 Depends: R (>= 2.10), methods, sp, mvtnorm
 License: GPL (>= 2)
-Repository: CRAN
-Repository/R-Forge/Project: caman
-Repository/R-Forge/Revision: 32
-Repository/R-Forge/DateTimeStamp: 2023-04-10 13:30:16
-Date/Publication: 2023-04-10 23:50:12 UTC
 NeedsCompilation: yes
-Packaged: 2023-04-10 13:49:08 UTC; rforge
+Packaged: 2023-09-19 09:11:33 UTC; doebler
+Repository: CRAN
+Date/Publication: 2023-09-22 15:10:09 UTC
